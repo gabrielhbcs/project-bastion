@@ -25,7 +25,7 @@ Para manter a `main` sempre funcional (estável), usamos o fluxo de branches. Im
 2. **Branches de Feature (`feat-` ou `feature/`)**: Onde a mágica acontece. Quer adicionar uma espada? Cria a branch `feat-add-sword-weapon`, trabalha nela e depois pede o merge.
 3. **Branches de Bugfix (`fix-`)**: Viu um erro na câmera? Cria a branch `fix-camera-bug`, resolve e manda o PR.
 
-![Fluxo de Branches](URL_DA_IMAGEM_AQUI)
+![Fluxo de Branches](fluxo-git.png)
 
 ### Passo a Passo para uma nova task:
 1. No seu PC, mude para a main: `git checkout main`
