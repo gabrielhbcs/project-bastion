@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MetalType" format=3 uid="uid://bv8bnwmudv6n1"]
+
+[ext_resource type="Script" uid="uid://laevhqg0xjh" path="res://scripts/metals/type_base.gd" id="1_wulnp"]
+
+[resource]
+script = ExtResource("1_wulnp")
+name = "Ferro"
+atk_spd_mod = 1.5
+metadata/_custom_type_script = "uid://laevhqg0xjh"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dkgm86bugn48b"]
+
+[ext_resource type="PackedScene" uid="uid://dw6kealt75cpv" path="res://scenes/weapons/weapon_base.tscn" id="1_f4mc5"]
+[ext_resource type="Script" uid="uid://owvqct0q5gav" path="res://scripts/spear.gd" id="2_osdwm"]
+
+[node name="Spear" unique_id=1286218843 instance=ExtResource("1_f4mc5")]
+script = ExtResource("2_osdwm")
+
+[node name="CooldownTimer" parent="." index="0" unique_id=1031468140]
+wait_time = 0.5

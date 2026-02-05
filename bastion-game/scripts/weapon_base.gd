@@ -2,24 +2,38 @@ extends Node2D
 class_name WeaponBase
 
 @onready var cooldown_timer: Timer = $CooldownTimer
-@onready var muzzle: Marker2D = $Muzzle
+@onready var weapon_muzzle: Marker2D = $Muzzle
+
+var char_muzzle: Marker2D
+@export var preferred_muzzle: String = "CenterMuzzle"
 
 # Essas variáveis você preenche no Inspector de cada arma herdada
 #@export var stats: WeaponStats 
-#@export var metal_type: MetalType
+@export var metal_type: Resource
+
+# atk spd final da arma
+var atk_spd = 1.0
+# atk spd base da arma (antes dos mods)
+var atk_spd_base = 1.0
 
 func _ready() -> void:
-	# Conecta o sinal do timer via código (mais limpo para o backend)
 	cooldown_timer.timeout.connect(_on_cooldown_timer_timeout)
-	print("Arma ", name, " equipada")
+	atk_spd = atk_spd_base / metal_type.atk_spd_mod
+	
+	char_muzzle = get_parent().get_parent().get_node(preferred_muzzle)
+	global_position = char_muzzle.global_position
+	
+	print("Arma ", name, " de ", metal_type.name, " equipada")
 	setup_weapon()
 
 func setup_weapon() -> void:
-	#if stats:
-	cooldown_timer.wait_time = 1.0
+	cooldown_timer.wait_time = atk_spd
 	cooldown_timer.start()
 
+
 func _on_cooldown_timer_timeout() -> void:
+	# Ataque padrão, acha um alvo e ataca
+	global_position = char_muzzle.global_position
 	var target = find_target()
 	execute_attack(target)
 	if target:

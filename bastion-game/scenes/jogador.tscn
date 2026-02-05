@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://cg1x3lf4qxr60"]
 
-[ext_resource type="Script" uid="uid://dgd87mes22jwy" path="res://walk.gd" id="1_g2brh"]
-[ext_resource type="Texture2D" uid="uid://fq606wtyubvj" path="res://assets/char.png" id="1_lj8jo"]
 [ext_resource type="Script" uid="uid://dtlyw54xaf7h8" path="res://scripts/character.gd" id="1_uahlj"]
 [ext_resource type="Texture2D" uid="uid://wm132p0k6hx6" path="res://assets/char-animated.png" id="2_uahlj"]
 [ext_resource type="Script" uid="uid://chjnwvv4s2ycp" path="res://scripts/weapon_manager.gd" id="3_qcln2"]
-[ext_resource type="PackedScene" uid="uid://dkgm86bugn48b" path="res://scenes/spear.tscn" id="4_s760d"]
+[ext_resource type="PackedScene" uid="uid://dkgm86bugn48b" path="res://scenes/weapons/spear.tscn" id="4_s760d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uahlj"]
 atlas = ExtResource("2_uahlj")
@@ -100,7 +98,6 @@ radius = 4.0
 height = 12.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=171020381]
-velocidade = 40.0
 script = ExtResource("1_uahlj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=270957033]
@@ -121,3 +118,9 @@ zoom = Vector2(5, 5)
 [node name="WeaponManager" type="Node2D" parent="." unique_id=996050983]
 script = ExtResource("3_qcln2")
 starting_weapon = ExtResource("4_s760d")
+
+[node name="MeleeMuzzle" type="Marker2D" parent="." unique_id=1996039613]
+position = Vector2(4, -6)
+
+[node name="CenterMuzzle" type="Marker2D" parent="." unique_id=569922194]
+position = Vector2(0, -6)

@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="MetalType" format=3 uid="uid://ce36idw65vgir"]
+
+[ext_resource type="Script" uid="uid://laevhqg0xjh" path="res://scripts/metals/type_base.gd" id="1_k86h3"]
+
+[resource]
+script = ExtResource("1_k86h3")
