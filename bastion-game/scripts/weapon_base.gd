@@ -16,9 +16,13 @@ var atk_spd = 1.0
 # atk spd base da arma (antes dos mods)
 var atk_spd_base = 1.0
 
+var att_distance_base = 10.0
+var att_distance = 10.0
+var att_duration_base = 1.0
+var att_duration = 1.0
+
 func _ready() -> void:
 	cooldown_timer.timeout.connect(_on_cooldown_timer_timeout)
-	atk_spd = atk_spd_base / metal_type.atk_spd_mod
 	
 	char_muzzle = get_parent().get_parent().get_node(preferred_muzzle)
 	global_position = char_muzzle.global_position
