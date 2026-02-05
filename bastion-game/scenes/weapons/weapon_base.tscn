@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dw6kealt75cpv"]
+
+[ext_resource type="Script" uid="uid://cketinv6m0eqh" path="res://scripts/weapon_base.gd" id="1_cwtna"]
+[ext_resource type="Resource" uid="uid://bv8bnwmudv6n1" path="res://scenes/metals/iron.tres" id="2_omet7"]
+[ext_resource type="Texture2D" uid="uid://2rbe0odko1sw" path="res://assets/spear.png" id="2_syhsr"]
+
+[node name="WeaponBase" type="Node2D" unique_id=1286218843]
+script = ExtResource("1_cwtna")
+metal_type = ExtResource("2_omet7")
+
+[node name="CooldownTimer" type="Timer" parent="." unique_id=1031468140]
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=644364331]
+
+[node name="Visual" type="Sprite2D" parent="." unique_id=1457059561]
+position = Vector2(-10, 0)
+texture = ExtResource("2_syhsr")
